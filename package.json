@@ -23,8 +23,6 @@
   "homepage": "https://github.com/livejs/2dpixels-terminal#readme",
   "dependencies": {
     "ansi": "^0.3.0",
-    "cwise": "^1.0.5",
-    "ndarray": "^1.0.18",
     "through2": "^2.0.0",
     "tinycolor2": "^1.1.2"
   },
