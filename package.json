@@ -1,0 +1,35 @@
+{
+  "name": "2dpixels-terminal",
+  "version": "1.0.0",
+  "description": "visualize 2dpixels in the terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livejs/2dpixels-terminal.git"
+  },
+  "keywords": [
+    "ndpixels",
+    "terminal",
+    "pixels"
+  ],
+  "author": "ahdinosaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livejs/2dpixels-terminal/issues"
+  },
+  "homepage": "https://github.com/livejs/2dpixels-terminal#readme",
+  "dependencies": {
+    "ansi": "^0.3.0",
+    "cwise": "^1.0.5",
+    "ndarray": "^1.0.18",
+    "through2": "^2.0.0",
+    "tinycolor2": "^1.1.2"
+  },
+  "devDependencies": {
+    "floodgate": "^0.1.2",
+    "rainbow-pixels": "^1.1.0"
+  }
+}
