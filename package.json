@@ -4,7 +4,8 @@
   "description": "visualize 2dpixels in the terminal",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test.js",
+    "build-example": "browserify example.js -o bundle.js --bare"
   },
   "repository": {
     "type": "git",
