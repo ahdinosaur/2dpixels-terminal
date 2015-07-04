@@ -3,16 +3,17 @@ var throttle = require('floodgate')
 
 var toTerminal = require('./')
 
-var height = process.stdout.rows
-var width = process.stdout.columns
+var opts = {
+  shape: [
+    process.stdout.columns,
+    process.stdout.rows
+  ],
+  fps: 60
+}
 
-var fps = 60
-
-rainbowPixels({
-  shape: [height, width]
-})
+rainbowPixels(opts)
 .pipe(throttle({
   objectMode: true,
-  interval: 1000 / fps
+  interval: 1000 / opts.fps
 }))
-.pipe(toTerminal())
+.pipe(toTerminal(opts))

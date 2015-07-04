@@ -9,11 +9,10 @@ function pixelsToTerminal (opts) {
   var cursor = ansi(stdout)
 
   var toTerminal = function toTerminal (pixels) {
-    for (var i = 0; i < pixels.shape[0]; i++) {
-      for (var j = 0; j < pixels.shape[1]; j++) {
-        writePixel(pixels.get(i, j))
+    for (var x = 0; x < pixels.shape[0]; x++) {
+      for (var y = 0; y < pixels.shape[1]; y++) {
+        writePixel(x, y, pixels.get(x, y))
       }
-      cursor.write('\n')
     }
   }
 
@@ -21,10 +20,11 @@ function pixelsToTerminal (opts) {
     cb(null, toTerminal(pixels))
   })
 
-  function writePixel (pixel) {
-    var color = Color(pixel).toHexString()
+  function writePixel (x, y, color) {
+    color = Color(color).toHexString()
 
     cursor
+    .goto(opts.shape[0] - x - 1, opts.shape[1] - y - 1)
     .hex(color)
     .write('\u2588')
   }
