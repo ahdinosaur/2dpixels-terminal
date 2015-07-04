@@ -23,8 +23,10 @@
   "homepage": "https://github.com/livejs/2dpixels-terminal#readme",
   "dependencies": {
     "ansi": "^0.3.0",
-    "through2": "^2.0.0",
-    "tinycolor2": "^1.1.2"
+    "color": "^0.10.1",
+    "color-convert": "^0.5.3",
+    "ndpixels-convert": "^1.0.3",
+    "through2": "^2.0.0"
   },
   "devDependencies": {
     "floodgate": "^0.1.2",

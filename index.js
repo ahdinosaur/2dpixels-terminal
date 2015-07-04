@@ -1,6 +1,6 @@
 var through = require('through2')
 var ansi = require('ansi')
-var Color = require('tinycolor2')
+var Color = require('color')
 
 module.exports = pixelsToTerminal
 
@@ -11,7 +11,7 @@ function pixelsToTerminal (opts) {
   var toTerminal = function toTerminal (pixels) {
     for (var x = 0; x < pixels.shape[0]; x++) {
       for (var y = 0; y < pixels.shape[1]; y++) {
-        writePixel(x, y, pixels.get(x, y))
+        writePixel(x, y, pixels.pick(x, y, null))
       }
     }
   }
@@ -20,12 +20,10 @@ function pixelsToTerminal (opts) {
     cb(null, toTerminal(pixels))
   })
 
-  function writePixel (x, y, color) {
-    color = Color(color).toHexString()
-
+  function writePixel (x, y, rgb) {
     cursor
     .goto(opts.shape[0] - x - 1, opts.shape[1] - y - 1)
-    .hex(color)
+    .rgb(rgb.get(0), rgb.get(1), rgb.get(2))
     .write('\u2588')
   }
 }
