@@ -17,7 +17,7 @@ var opts = {
 
 pull(
   rainbowPixels(opts),
-  converter('hsv', 'rgb'),
+  converter('hsl', 'rgb'),
   animator(),
   toTerminal(opts),
   drain()

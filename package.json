@@ -1,6 +1,6 @@
 {
   "name": "2dpixels-terminal",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "visualize 2dpixels in the terminal",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,11 @@
   "dependencies": {
     "ansi": "^0.3.0",
     "color": "^0.10.1",
-    "color-convert": "^0.5.3",
-    "ndpixels-convert": "^1.0.3",
     "pull-stream": "^3.1.0"
   },
   "devDependencies": {
+    "ndpixels-convert": "^1.1.0",
     "raf": "^3.2.0",
-    "rainbow-pixels": "^1.1.0"
+    "rainbow-pixels": "^4.0.0"
   }
 }
